@@ -11,9 +11,9 @@ unsigned long long solve(unsigned long long a, unsigned long long b) {
     unsigned long long c = solve(a, b / 2);
     c = c * c % mod;
     if (b % 2 == 1) {
-        c *= a;
+        c = c * a % mod;
     }
-    return c % mod;
+    return c;
 }
 
 int main() {
